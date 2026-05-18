@@ -5,87 +5,65 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // =====================================================
-    // COUNTDOWN ASAMBLEA
-    // =====================================================
+// =====================================================
+// COUNTDOWN ASAMBLEA CIMARA PH
+// =====================================================
 
-    const countdown = document.getElementById('countdown');
+const assemblyDate = new Date("June 14, 2026 08:00:00").getTime();
 
-    if (countdown) {
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
 
-        /*
-            FORMATO:
-            Año, Mes(0-11), Día, Hora, Minuto
+function updateCountdown() {
 
-            Ejemplo:
-            Junio = 5
-        */
+    const now = new Date().getTime();
 
-        const assemblyDate = new Date(2026, 5, 20, 19, 0, 0).getTime();
+    const distance = assemblyDate - now;
 
-        const updateCountdown = () => {
+    if (distance <= 0) {
 
-            const now = new Date().getTime();
+        daysEl.innerHTML = "00";
+        hoursEl.innerHTML = "00";
+        minutesEl.innerHTML = "00";
+        secondsEl.innerHTML = "00";
 
-            const distance = assemblyDate - now;
-
-            if (distance <= 0) {
-
-                countdown.innerHTML = `
-                    <div class="countdown-finished">
-                        <i class="fa-solid fa-circle-check"></i>
-                        La Asamblea se encuentra en desarrollo.
-                    </div>
-                `;
-
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-            const hours = Math.floor(
-                (distance % (1000 * 60 * 60 * 24))
-                / (1000 * 60 * 60)
-            );
-
-            const minutes = Math.floor(
-                (distance % (1000 * 60 * 60))
-                / (1000 * 60)
-            );
-
-            const seconds = Math.floor(
-                (distance % (1000 * 60))
-                / 1000
-            );
-
-            countdown.innerHTML = `
-                <div class="countdown-box">
-                    <span>${days}</span>
-                    <small>Días</small>
-                </div>
-
-                <div class="countdown-box">
-                    <span>${hours}</span>
-                    <small>Horas</small>
-                </div>
-
-                <div class="countdown-box">
-                    <span>${minutes}</span>
-                    <small>Minutos</small>
-                </div>
-
-                <div class="countdown-box">
-                    <span>${seconds}</span>
-                    <small>Segundos</small>
-                </div>
-            `;
-        };
-
-        updateCountdown();
-
-        setInterval(updateCountdown, 1000);
-
+        return;
     }
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    daysEl.innerHTML = String(days).padStart(2, "0");
+
+    hoursEl.innerHTML = String(hours).padStart(2, "0");
+
+    minutesEl.innerHTML = String(minutes).padStart(2, "0");
+
+    secondsEl.innerHTML = String(seconds).padStart(2, "0");
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
 
     // =====================================================
     // CONTROL BOTÓN ASAMBLEA
