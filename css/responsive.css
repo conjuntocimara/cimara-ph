@@ -1,0 +1,485 @@
+/* ===================================== */
+/* LARGE TABLETS */
+/* ===================================== */
+
+@media (max-width: 1200px) {
+
+    .future-container,
+    .contact-layout,
+    .hero-grid,
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .future-image {
+
+        order: -1;
+    }
+
+    .hero-content h2 {
+
+        font-size: 3.5rem;
+    }
+
+}
+
+/* ===================================== */
+/* TABLETS */
+/* ===================================== */
+
+@media (max-width: 992px) {
+
+    /* ====================== */
+    /* GENERAL */
+    /* ====================== */
+
+    section {
+
+        padding: 90px 0;
+    }
+
+    .container {
+
+        width: 92%;
+    }
+
+    /* ====================== */
+    /* NAVBAR */
+    /* ====================== */
+
+    .navbar {
+
+        height: 80px;
+    }
+
+    .nav-btn {
+
+        display: none;
+    }
+
+    .menu-toggle {
+
+        display: flex;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 80px;
+        left: -100%;
+
+        width: 100%;
+        height: calc(100vh - 80px);
+
+        background: rgba(15, 23, 42, 0.98);
+
+        backdrop-filter: blur(20px);
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transition: 0.4s ease;
+
+        z-index: 999;
+    }
+
+    .nav-links.active {
+
+        left: 0;
+    }
+
+    .nav-links a {
+
+        font-size: 1.1rem;
+    }
+
+    /* ====================== */
+    /* HERO */
+    /* ====================== */
+
+    .hero {
+
+        min-height: auto;
+        padding: 160px 0 100px;
+    }
+
+    .hero-small {
+
+        min-height: 70vh;
+    }
+
+    .hero-content h2 {
+
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* ====================== */
+    /* GRIDS */
+    /* ====================== */
+
+    .cards-grid,
+    .projects-grid,
+    .stats-grid,
+    .footer-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ====================== */
+    /* TIMELINE */
+    /* ====================== */
+
+    .timeline::before {
+
+        left: 20px;
+    }
+
+    .timeline-item {
+
+        width: calc(100% - 60px);
+
+        left: 40px !important;
+
+        margin-bottom: 40px;
+    }
+
+    /* ====================== */
+    /* FUTURE SECTION */
+    /* ====================== */
+
+    .future-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .future-image {
+
+        order: -1;
+    }
+
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media (max-width: 768px) {
+
+    /* ====================== */
+    /* GENERAL */
+    /* ====================== */
+
+    section {
+
+        padding: 70px 0;
+    }
+
+    .container {
+
+        width: 94%;
+    }
+
+    /* ====================== */
+    /* TOPBAR */
+    /* ====================== */
+
+    .topbar {
+
+        display: none;
+    }
+
+    /* ====================== */
+    /* NAVBAR */
+    /* ====================== */
+
+    .navbar {
+
+        height: 75px;
+    }
+
+    .logo {
+
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-text h1 {
+
+        font-size: 1rem;
+    }
+
+    .logo-text span {
+
+        font-size: 0.7rem;
+    }
+
+    .nav-links {
+
+        top: 75px;
+        height: calc(100vh - 75px);
+    }
+
+    /* ====================== */
+    /* HERO */
+    /* ====================== */
+
+    .hero {
+
+        padding: 140px 0 80px;
+    }
+
+    .hero-content {
+
+        text-align: center;
+    }
+
+    .hero-content h2 {
+
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .btn {
+
+        width: 100%;
+        max-width: 320px;
+
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* ====================== */
+    /* TITLES */
+    /* ====================== */
+
+    .section-title h2 {
+
+        font-size: 2rem;
+    }
+
+    .section-title p {
+
+        font-size: 0.95rem;
+    }
+
+    /* ====================== */
+    /* CARDS */
+    /* ====================== */
+
+    .cards-grid,
+    .projects-grid,
+    .stats-grid,
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .status-card,
+    .project-card,
+    .stat-card {
+
+        padding: 30px;
+    }
+
+    /* ====================== */
+    /* TIMELINE */
+    /* ====================== */
+
+    .timeline-item {
+
+        margin-left: 0;
+        width: calc(100% - 40px);
+    }
+
+    /* ====================== */
+    /* FUTURE */
+    /* ====================== */
+
+    .future-content h2 {
+
+        font-size: 2rem;
+    }
+
+    .future-list {
+
+        grid-template-columns: 1fr;
+    }
+
+    /* ====================== */
+    /* ANNOUNCEMENT */
+    /* ====================== */
+
+    .announcement-container {
+
+        padding: 35px 25px;
+    }
+
+    /* ====================== */
+    /* FOOTER */
+    /* ====================== */
+
+    .footer {
+
+        text-align: center;
+    }
+
+    .footer-column {
+
+        align-items: center;
+    }
+
+    .footer-social {
+
+        justify-content: center;
+    }
+
+    .footer-bottom-content {
+
+        flex-direction: column;
+        gap: 10px;
+
+        text-align: center;
+    }
+
+    /* ====================== */
+    /* WHATSAPP */
+    /* ====================== */
+
+    .whatsapp-float {
+
+        width: 58px;
+        height: 58px;
+
+        right: 18px;
+        bottom: 18px;
+
+        font-size: 1.6rem;
+    }
+
+}
+
+/* ===================================== */
+/* SMALL MOBILE */
+/* ===================================== */
+
+@media (max-width: 480px) {
+
+    /* ====================== */
+    /* HERO */
+    /* ====================== */
+
+    .hero-content h2 {
+
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+
+        font-size: 0.95rem;
+    }
+
+    /* ====================== */
+    /* TITLES */
+    /* ====================== */
+
+    .section-title h2 {
+
+        font-size: 1.7rem;
+    }
+
+    /* ====================== */
+    /* CARDS */
+    /* ====================== */
+
+    .status-card,
+    .project-card,
+    .timeline-item,
+    .stat-card {
+
+        padding: 25px;
+    }
+
+    /* ====================== */
+    /* BUTTONS */
+    /* ====================== */
+
+    .btn {
+
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+
+    /* ====================== */
+    /* FOOTER */
+    /* ====================== */
+
+    .footer-logo {
+
+        width: 65px;
+    }
+
+    /* ====================== */
+    /* ANNOUNCEMENT */
+    /* ====================== */
+
+    .announcement-container {
+
+        padding: 28px 20px;
+    }
+
+}
+
+/* ===================================== */
+/* EXTRA SMALL */
+/* ===================================== */
+
+@media (max-width: 360px) {
+
+    .hero-content h2 {
+
+        font-size: 1.8rem;
+    }
+
+    .section-title h2 {
+
+        font-size: 1.5rem;
+    }
+
+    .logo {
+
+        width: 40px;
+        height: 40px;
+    }
+
+}
