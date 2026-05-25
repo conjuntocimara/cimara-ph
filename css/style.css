@@ -562,14 +562,14 @@ ul {
     border:
         1px solid rgba(255,255,255,0.18);
 
-    color: white;
+    color: rgb(53, 68, 56);
 
     backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
 
-    background: white;
+    background: rgb(181, 183, 182);
 
     color: var(--primary);
 
