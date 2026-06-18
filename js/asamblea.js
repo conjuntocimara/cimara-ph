@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // COUNTDOWN ASAMBLEA CIMARA PH
 // =====================================================
 
-const assemblyDate = new Date("June 14, 2026 08:00:00").getTime();
+// Fecha actualizada: Jueves 18 de junio de 2026 a las 8:00 p.m. (hora Colombia)
+const assemblyDate = new Date("June 18, 2026 20:00:00 GMT-0500").getTime();
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -75,7 +76,8 @@ setInterval(updateCountdown, 1000);
 
         const now = new Date().getTime();
 
-        const releaseDate = new Date(2026, 5, 20, 18, 0, 0).getTime();
+        // Fecha de liberación ajustada: 18 de junio de 2026 a las 8:00 p.m.
+        const releaseDate = new Date(2026, 5, 18, 20, 0, 0).getTime();
 
         if (now >= releaseDate) {
 
